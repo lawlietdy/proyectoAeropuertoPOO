@@ -17,7 +17,7 @@ public class Principal {
         
         for(Vehiculo vehiculos: misVehiculos){
             System.out.println(vehiculos.mostrarDatos());
-        }
+    }
     }
     
     
