@@ -5,8 +5,10 @@ import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String []args){
-        Persona p1 = new Persona("Angel", 19);
+        Persona persona1 = new Persona("Angel", 19);
+        persona1.correr();
         
-        p1.mostrarDatos();
+        Persona persona2 = new Persona("12903121");
+        persona2.correr(10);
     }
 }
