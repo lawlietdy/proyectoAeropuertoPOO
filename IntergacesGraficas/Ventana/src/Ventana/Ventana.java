@@ -4,6 +4,7 @@ package Ventana;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.*;
 
@@ -38,6 +39,8 @@ public class Ventana extends JFrame{
         // Para cambiar el color se debe desactivar los disenos por defecto del componente
         etiqueta.setOpaque(true); // True permite pintar el fondor
         etiqueta.setBackground(Color.red);
+        etiqueta.setFont(new Font("arial", Font.PLAIN, 16)); // Establece fuente del texto
+        
         panel.add(etiqueta);
     }
 }
