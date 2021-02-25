@@ -33,6 +33,10 @@ public class Ventana extends JFrame{
         JLabel etiqueta = new JLabel();
         etiqueta.setText("Hola");
         etiqueta.setBounds(50, 20, 100, 20);
+        etiqueta.setForeground(Color.blue); // Cambiar el color del texto de la etiqueta
+        // Para cambiar el color se debe desactivar los disenos por defecto del componente
+        etiqueta.setOpaque(true); // True permite pintar el fondor
+        etiqueta.setBackground(Color.red);
         panel.add(etiqueta);
     }
 }
