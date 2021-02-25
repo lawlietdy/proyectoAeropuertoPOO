@@ -15,7 +15,6 @@ public class Ventana extends JFrame{
         //setLocation(100, 200);// Establece la locacion donde aparacera la ventana
         //setBounds(100, 200, 500, 500); // Estable el tamano y establece la locacion a la vez
         setLocationRelativeTo(null); // Con el argumento null establece la locacion en el centro de la pantalla
-        
         //setResizable(false); // Evita que el usuario pueda cambiar el tamaño de la ventana
         setMinimumSize(new Dimension(300, 300));
         // this.getContentPane().setBackground(Color.BLUE); // Establecer el color de la ventana     
@@ -29,8 +28,10 @@ public class Ventana extends JFrame{
         //panel.setBackground(Color.DARK_GRAY); // Se establece el color del panel
         panel.setLayout(null);
         this.getContentPane().add(panel); // Se agrega el panel a la ventana
-        
+        // Con SwingConstans estableces la alineacion del texto: CENTER, RIGHT, LEFT,..
+        // JLabel etiqueta = new JLabel("Hola que tal", SwingConstants.CENTER);
         JLabel etiqueta = new JLabel();
+        etiqueta.setHorizontalAlignment(SwingConstants.CENTER); // Esta es otra manera de estableces la alineación
         etiqueta.setText("Hola");
         etiqueta.setBounds(50, 20, 100, 20);
         etiqueta.setForeground(Color.blue); // Cambiar el color del texto de la etiqueta
