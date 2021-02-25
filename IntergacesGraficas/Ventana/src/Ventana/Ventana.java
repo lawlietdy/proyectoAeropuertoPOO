@@ -33,14 +33,20 @@ public class Ventana extends JFrame{
         // JLabel etiqueta = new JLabel("Hola que tal", SwingConstants.CENTER);
         JLabel etiqueta = new JLabel();
         etiqueta.setHorizontalAlignment(SwingConstants.CENTER); // Esta es otra manera de estableces la alineación
-        etiqueta.setText("Hola");
-        etiqueta.setBounds(50, 20, 100, 20);
-        etiqueta.setForeground(Color.blue); // Cambiar el color del texto de la etiqueta
+        etiqueta.setText("Mundial 2022");
+        etiqueta.setBounds(85, 10, 300, 80);
+        etiqueta.setForeground(Color.black); // Cambiar el color del texto de la etiqueta
         // Para cambiar el color se debe desactivar los disenos por defecto del componente
-        etiqueta.setOpaque(true); // True permite pintar el fondor
-        etiqueta.setBackground(Color.red);
-        etiqueta.setFont(new Font("arial", Font.PLAIN, 16)); // Establece fuente del texto
-        
+        // etiqueta.setOpaque(true); // True permite pintar el fondor
+        // etiqueta.setBackground(Color.red);
+        etiqueta.setFont(new Font("copper black", 0, 30)); // Establece fuente del texto
         panel.add(etiqueta);
+        
+        // Etiqueta imagen - Primera forma
+        ImageIcon imagen = new ImageIcon("mundial.jpg");
+        JLabel etiqueta2 = new JLabel(imagen);
+        etiqueta2.setBounds(50, 100, 990, 557);
+        panel.add(etiqueta2);
+        
     }
 }
