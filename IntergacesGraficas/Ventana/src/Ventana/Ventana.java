@@ -5,6 +5,7 @@ package Ventana;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.*;
 
@@ -44,8 +45,9 @@ public class Ventana extends JFrame{
         
         // Etiqueta imagen - Primera forma
         ImageIcon imagen = new ImageIcon("mundial.jpg");
-        JLabel etiqueta2 = new JLabel(imagen);
-        etiqueta2.setBounds(50, 100, 990, 557);
+        JLabel etiqueta2 = new JLabel();
+        etiqueta2.setBounds(20, 100, 400, 270);
+        etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(), etiqueta2.getHeight(), Image.SCALE_SMOOTH)));
         panel.add(etiqueta2);
         
     }
