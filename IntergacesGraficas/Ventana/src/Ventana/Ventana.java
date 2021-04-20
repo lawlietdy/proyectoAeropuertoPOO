@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.*;
 
 public class Ventana extends JFrame{
+    JPanel panel;
     
     public Ventana(){
         setSize(500, 500); // Se establece el tamano de la ventana
@@ -26,10 +27,19 @@ public class Ventana extends JFrame{
     
     // Creamos un metodo para crear un Panel - esto para tener ordenado
     private void iniciarComponentes(){
-        JPanel panel = new JPanel();
+        colocarPaneles();
+        // colocarEtiquetas();
+        colocarBotones();
+    }
+    
+    private void colocarPaneles(){
+        panel = new JPanel();
         //panel.setBackground(Color.DARK_GRAY); // Se establece el color del panel
         panel.setLayout(null);
         this.getContentPane().add(panel); // Se agrega el panel a la ventana
+    }
+    
+    private void colocarEtiquetas(){
         // Con SwingConstans estableces la alineacion del texto: CENTER, RIGHT, LEFT,..
         // JLabel etiqueta = new JLabel("Hola que tal", SwingConstants.CENTER);
         JLabel etiqueta = new JLabel();
@@ -49,6 +59,16 @@ public class Ventana extends JFrame{
         etiqueta2.setBounds(20, 100, 400, 270);
         etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(), etiqueta2.getHeight(), Image.SCALE_SMOOTH)));
         panel.add(etiqueta2);
-        
+    }
+    
+    private void colocarBotones(){
+        JButton boton = new JButton();
+        boton.setBounds(100, 100, 100, 50);
+        boton.setText("Boton");
+        boton.setEnabled(true); // Desabilita el boton
+        boton.setMnemonic('a'); // Establecemos un atajo (alt + char)
+        boton.setForeground(Color.blue);// Cambiar color de la letra
+        boton.setFont(new Font("arial", 1, 16));// Cambiar fuente de la letra
+        panel.add(boton);
     }
 }
